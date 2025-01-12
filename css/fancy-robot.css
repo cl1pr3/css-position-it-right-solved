@@ -1,38 +1,136 @@
 .robot-container {
+  width: 80%;
+  height: 80vh;
+  margin: auto;
+  padding: auto;
+  border: 2px solid #333;
+  position: relative;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .robot-face-shape {
+  width: 200px;
+  height: 150px;
+  background-color: slategray;
+  border-radius: 15px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: #121 2px solid;
+  position: relative;
 }
 
 .robot-eye-left {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(150, 48, 48, 0.75);
+  border-radius: 50%;
+  top: 10px;
+  position: absolute;
+  top: 20px; left: 20px;
 }
 
 .robot-eye-right {
+  width: 30px;
+  height: 45px;
+  background: linear-gradient(to bottom,#348ac7, forestgreen);
+  top: -10px;
+  position: absolute;
+  top: 20px; right: 40px;
+}
+
+.robot-ear-left,
+.robot-ear-right {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px 30px 0 0;
+  margin: 0px;
+  position: absolute;
 }
 
 .robot-ear-left {
+  transform: rotate(-90deg);
+  background-color: blue;
+  right: 198px;
+  position: absolute;
 }
-
 .robot-ear-right {
+  transform: rotate(90deg);
+  background-color: purple;
+  left: 198px;
+  position: absolute;
 }
 
 .robot-nose {
+  width: 40px;
+  height: 40px;
+  background-color: slateblue;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.robot-teeth {
+.robot-mouth {
+  width: 60%; 
+  height: 10%; 
+  background-color: #8B4513; 
+  border-radius: 60%; 
+  display: flex; 
+  justify-content: center;
+  align-items: flex-start;
+  margin: 10px auto; 
+  top: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .robot-tooth {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  margin: 0 2px;
+
 }
 
-.robot-hair-style {
+.robot-hair {
+  position: absolute;
+  top: -150px;
+  left: 53%;
+  transform: translateX(-50%);
 }
 
-.robot-hair-one {
+.robot-hair-base {
+  width: 40px;
+  height: 150px;
+  background-color: gold;
+  position: absolute;
+  clip-path: polygon(
+    70% 0%,        /* Tip*/
+    60% 35%,      /* bottom right tri */
+    88% 25%,       /* top right trap */
+    70% 65%,      /* bottom right  */
+    10% 65%,      /* bottom left  */
+    40% 40%,       /* bottom left trap */
+    0% 50%  );   /* left point */
+    z-index: 1;
+
 }
 
-.robot-hair-two {
-}
+.robot-hair-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  background-image: url('https://picsum.photos/200/300');
+  background-size: cover;
+  background-position: center; 
+  z-index: 3;
+  top: -0px;
 
-.robot-hair-three {
 }
