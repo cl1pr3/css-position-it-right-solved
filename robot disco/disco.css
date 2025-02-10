@@ -1,0 +1,111 @@
+.robot-hair-base {
+  animation: fadeInOut 1s infinite;
+}
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.robot-eye-left {
+  transition: transform 0.3s ease-in-out;
+}
+.robot-eye-left:hover {
+  animation: shrinkTwice 0.5s ease-in-out forwards;
+}
+@keyframes shrinkTwice {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+/*kinda want to make an iris that tracks mouse position*/
+
+.robot-eye-right {
+  animation: spinRight 1s infinite;
+}
+@keyframes spinRight {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.robot-hair-top {
+  animation: smoothRotate 3s linear infinite;
+}
+@keyframes smoothRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.robot-mouth {
+  animation: blinkLeft 1s infinite;
+  transform-origin: center;
+}
+@keyframes blinkLeft {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.1);
+  }
+}
+
+.robot-hair {
+  transform-origin: center 150px; 
+  animation: hairSwing 2s ease-in-out infinite alternate;
+}
+
+@keyframes hairSwing {
+  0% { transform: rotate(45deg); }
+  100% { transform: rotate(-45deg); }
+}
+
+
+.robot-ear-left {
+  animation: colorCycle 3s infinite alternate; 
+}
+@keyframes colorCycle {
+  0% { background-color: blue; }  
+  50% { background-color: green; } 
+  100% { background-color: red; }  
+}
+
+.robot-ear-right {
+  animation: colorCycle2 3s infinite alternate; 
+}
+@keyframes colorCycle2 {
+  0% { background-color: purple; }  
+  50% { background-color: orange; } 
+  100% { background-color: pink; }  
+}
+
+.robot-nose{
+  animation: noseWiggle 1s infinite alternate;
+  transform-origin: 0px -250px
+}
+
+
+@keyframes noseWiggle {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
